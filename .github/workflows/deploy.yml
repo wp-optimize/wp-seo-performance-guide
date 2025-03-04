@@ -21,7 +21,7 @@ jobs:
           cache: yarn
 
       - name: Install Yarn
-        run: npm install -g yarn@3.6.1  # Ensure correct Yarn version is installed
+        run: corepack enable  # Ensure correct Yarn version is installed
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
