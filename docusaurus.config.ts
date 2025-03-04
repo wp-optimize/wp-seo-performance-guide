@@ -17,7 +17,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'wp-optimize.github.io', // Usually your GitHub org/user name.
+  organizationName: 'wp-optimize.github.io', // Deployment Repository
   projectName: 'wp-optimize', // Usually your repo name.
 
   onBrokenLinks: 'throw',
