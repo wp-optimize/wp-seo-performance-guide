@@ -29,6 +29,7 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Test build website
         run: yarn build
+
   deploy:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
@@ -51,18 +52,20 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build website
         run: yarn build
+      - name: Set organization variable
+        run: echo "ORG_NAME=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)" >> $GITHUB_ENV
       - name: Clone target repository
-        run: git clone git@github.com:wp-optimize/wp-optimize.github.io.git
+        run: git clone git@github.com:${{ env.ORG_NAME }}/${{ env.ORG_NAME }}.github.io.git
       - name: Clean target repository
         run: |
-          cd wp-optimize.github.io
+          cd ${{ env.ORG_NAME }}.github.io
           git rm -rf .
           git clean -fxd
       - name: Copy build artifacts
-        run: cp -a build/. wp-optimize.github.io/
+        run: cp -a build/. ${{ env.ORG_NAME }}.github.io/
       - name: Commit and push changes
         run: |
-          cd wp-optimize.github.io
+          cd ${{ env.ORG_NAME }}.github.io
           git config user.email "actions@github.com"
           git config user.name "gh-actions"
           git add .
