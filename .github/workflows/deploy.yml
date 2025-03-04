@@ -55,4 +55,6 @@ jobs:
           git remote add target-repo git@github.com:wp-optimize/wp-optimize.github.io.git
           yarn install --frozen-lockfile
           yarn build
+          git fetch target-repo main
+          git merge --ff-only target-repo/main || (echo "Merge conflict detected, push aborted!" && exit 1)
           git push target-repo main
