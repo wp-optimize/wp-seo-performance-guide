@@ -23,7 +23,7 @@ jobs:
       - name: enable corepack and set yarn version to latest stable
         run: |
           corepack enable
-          yarn set version 3.6
+          yarn set version 3.6.1
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
