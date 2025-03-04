@@ -47,12 +47,14 @@ jobs:
           yarn set version 3.6.1
       - uses: webfactory/ssh-agent@v0.5.0
         with:
-          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
-      - name: Configure Git and Push to Another Repo (SSH)
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+      - name: Configure Git and Push Build Files to Another Repo (SSH)
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "gh-actions"
-          git remote add target-repo git@github.com:wp-optimize/wp-optimize.github.io.git
-          yarn install --frozen-lockfile
-          yarn build
-          git push --force target-repo main
+          git clone --depth=1 git@github.com:wp-optimize/wp-optimize.github.io.git out
+          rsync -av --delete build/ out/
+          cd out
+          git add .
+          git commit -m "Deploy new build" || echo "No changes to commit"
+          git push --force origin main
