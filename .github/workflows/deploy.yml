@@ -36,49 +36,35 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # Explicitly specify the target repository for deployment
-          repository: wp-optimize/wp-optimize.github.io
-          token: ${{ secrets.GH_PAGES_DEPLOY }}
-      
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: yarn
-
       - name: enable corepack and set yarn version to latest stable
         run: |
           corepack enable
           yarn set version 3.6.1
-      
-      - name: Checkout source repository
-        uses: actions/checkout@v4
+      - uses: webfactory/ssh-agent@v0.5.0
         with:
-          path: source
-      
-      - name: Deploy to GitHub Pages
-        env:
-          USE_SSH: true
+          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build website
+        run: yarn build
+      - name: Clone target repository
+        run: git clone git@github.com:wp-optimize/wp-optimize.github.io.git
+      - name: Clean target repository
         run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "gh-actions"
-          
-          # Move to source directory and install dependencies
-          cd source
-          yarn install --frozen-lockfile
-          
-          # Build the site
-          yarn build
-          
-          # Move back to the root of the target repository
-          cd ..
-          
-          # Remove existing contents (optional, depends on your preference)
-          rm -rf *
-          
-          # Copy built site to the root
-          cp -r source/build/* .
-          
-          # Commit and push changes
+          cd wp-optimize.github.io
+          git rm -rf .
+          git clean -fxd
+      - name: Copy build artifacts
+        run: cp -a build/. wp-optimize.github.io/
+      - name: Commit and push changes
+        run: |
+          cd wp-optimize.github.io
+          git config user.email "actions@github.com"
+          git config user.name "gh-actions"
           git add .
-          git commit -m "Deploy static site from wp-seo-performance-guide"
-          git push
+          git commit -m "Deploy site $(date +'%Y-%m-%d %H:%M:%S')"
+          git push origin main
