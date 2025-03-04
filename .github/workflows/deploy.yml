@@ -17,11 +17,15 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20.10.0  # Updated Node.js version
           cache: yarn
+
+      - name: Install Yarn
+        run: npm install -g yarn@3.6.1  # Ensure correct Yarn version is installed
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      
       - name: Build website
         run: yarn build
 
