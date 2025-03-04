@@ -21,7 +21,7 @@ jobs:
           cache: yarn
 
       - name: Install Yarn
-        run: corepack enable  # Ensure correct Yarn version is installed
+        run: corepack enable && yarn set version from sources  # Ensure correct Yarn version is installed
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
