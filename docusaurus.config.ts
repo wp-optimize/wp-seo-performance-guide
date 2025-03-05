@@ -43,7 +43,7 @@ const config: Config = {
       respectPrefersColorScheme: true, // Follow system preference
     },
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.jpg',
     navbar: {
       title: 'WordPress Optimize Guide',
       logo: {
