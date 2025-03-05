@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'WordPress Performance Mastery',
+  title: 'WordPress Optimize Guide',
   tagline: 'High-Performance & SEO Optimization guide for Core Web Vitals',
   favicon: 'img/favicon.ico',
   url: 'https://wp-optimize.github.io',
@@ -45,9 +45,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'WordPress Performance Mastery',
+      title: 'WordPress Optimize Guide',
       logo: {
-        alt: 'WordPress Performance Mastery Logo',
+        alt: 'WordPress Optimize Guide Logo',
         src: 'img/logo.svg',
       },
       items: [
