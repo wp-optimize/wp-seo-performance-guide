@@ -1,48 +1,39 @@
 ---
+title: Introduction
+sidebar_label: Introduction
 sidebar_position: 1
 slug: /
 ---
 
-# My Tutorial (test content changing)
+# Optimizing WordPress for Core Web Vitals and SEO
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to the ultimate guide for configuring a high-performance WordPress setup that excels in **Core Web Vitals** and **SEO**. This documentation will walk you through every step of the process, from selecting the right hosting and server configuration to optimizing WordPress themes, plugins, and caching mechanisms.
 
-## Getting Started
+## Why This Guide?
 
-Get started by **creating a new site**.
+Achieving a fast, SEO-friendly WordPress site requires more than just installing a caching plugin. It involves:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+- **Choosing the right hosting environment**: A well-configured server stack is the foundation of performance.
+- **Optimizing PHP and database settings**: Fine-tuning these ensures your site runs efficiently under heavy loads.
+- **Selecting lightweight themes and plugins**: Bloated code can slow down your site and harm SEO.
+- **Implementing advanced caching strategies**: Proper caching reduces server load and improves page load times.
+- **Ensuring security and scalability**: A secure site is a trustworthy site, and scalability ensures your site can handle traffic spikes.
 
-### What you'll need
+## What You'll Learn
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+This guide covers:
 
-## Generate a new site
+1. **Server Configuration**: How to set up CyberPanel, OpenLiteSpeed, MariaDB, and PHP for optimal performance.
+2. **WordPress Optimization**: Best practices for configuring WordPress, including themes, plugins, and caching.
+3. **Core Web Vitals**: Techniques to improve Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS).
+4. **SEO Best Practices**: Tips for on-page SEO, schema markup, and technical SEO.
 
-Generate a new Docusaurus site using the **classic template**.
+## Who Is This For?
 
-The classic template will automatically be added to your project after you run the command:
+This guide is for:
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+- **Developers** who want to build fast, SEO-friendly WordPress sites.
+- **Site Owners** who want to improve their site's performance and search engine rankings.
+- **Hosting Providers** looking to offer optimized WordPress hosting solutions.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Let’s get started with the **Server Configuration**!
