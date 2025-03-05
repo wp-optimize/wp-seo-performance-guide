@@ -2,7 +2,7 @@
 
 Welcome to the **Optimized WordPress Setup** repository! This project provides a step-by-step guide to configuring a high-performance WordPress environment that excels in **Core Web Vitals** and **SEO**. Whether you're a developer, site owner, or hosting provider, this guide will help you build fast, secure, and scalable WordPress sites.
 
----
+
 
 ## 🚀 Features
 
@@ -12,7 +12,7 @@ Welcome to the **Optimized WordPress Setup** repository! This project provides a
 - **SEO Best Practices**: On-page SEO, schema markup, and technical SEO tips.
 - **Detailed Documentation**: Built with **Docusaurus** for easy navigation and readability.
 
----
+
 
 ## 📖 Documentation
 
@@ -23,26 +23,26 @@ The documentation is divided into the following sections:
 
 👉 [View Documentation](https://wp-optimize.github.io/)
 
----
+
 
 ## 🤝 Contributing
 
 We welcome contributions! If you'd like to improve this guide or add new features
 
----
+
 
 ## 📜 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
----
+
 
 ## 🙏 Acknowledgments
 
 - **CyberPanel**: For providing an easy-to-use control panel.
 - **OpenLiteSpeed**: For its lightweight and high-performance web server.
 
----
+
 
 ## 📧 Contact
 
