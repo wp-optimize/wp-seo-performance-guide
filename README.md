@@ -1,4 +1,4 @@
-# Mastering WordPress: High-Performance & SEO Optimization for Core Web Vitals
+# WordPress Performance Mastery: High-Performance & SEO Optimization guide for Core Web Vitals
 
 Welcome to the **Optimized WordPress Setup** repository! This project provides a step-by-step guide to configuring a high-performance WordPress environment that excels in **Core Web Vitals** and **SEO**. Whether you're a developer, site owner, or hosting provider, this guide will help you build fast, secure, and scalable WordPress sites.
 
