@@ -23,10 +23,11 @@ Achieving a fast, SEO-friendly WordPress site requires more than just installing
 
 This guide covers:
 
-1. **Server Configuration**: How to set up CyberPanel, OpenLiteSpeed, MariaDB, and PHP for optimal performance.
-2. **WordPress Optimization**: Best practices for configuring WordPress, including themes, plugins, and caching.
-3. **Core Web Vitals**: Techniques to improve Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS).
-4. **SEO Best Practices**: Tips for on-page SEO, schema markup, and technical SEO.
+1. **Choosing the Right Hosting**: How to choose the right hosting environment.
+2. **Server Configuration**: How to set up CyberPanel, OpenLiteSpeed, MariaDB, and PHP for optimal performance.
+3. **WordPress Optimization**: Best practices for configuring WordPress, including themes, plugins, and caching.
+4. **Core Web Vitals**: Techniques to improve Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS).
+5. **SEO Best Practices**: Tips for on-page SEO, schema markup, and technical SEO.
 
 ## Who Is This For?
 
@@ -36,4 +37,4 @@ This guide is for:
 - **Site Owners** who want to improve their site's performance and search engine rankings.
 - **Hosting Providers** looking to offer optimized WordPress hosting solutions.
 
-Let’s get started with the **Server Configuration**!
+Let’s get started with the **Choosing the Right Hosting**!
