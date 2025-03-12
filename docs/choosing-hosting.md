@@ -1,6 +1,7 @@
 ---
 title: Choosing the Right Hosting
 sidebar_label: Choosing the Right Hosting
+sidebar_position: 2
 ---
 
 # Choosing the Right Hosting Environment

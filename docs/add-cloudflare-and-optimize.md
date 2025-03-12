@@ -1,6 +1,7 @@
 ---
 title: Add cloudflare and optimize
 sidebar_label: Add cloudflare and optimize
+sidebar_position: 4
 ---
 
 ## Configuring Cloudflare Before Installing WordPress and Optimize Settings for Performance and SEO

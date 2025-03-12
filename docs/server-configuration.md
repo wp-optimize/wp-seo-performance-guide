@@ -1,6 +1,7 @@
 ---
 title: Server Configuration
 sidebar_label: Server Configuration
+sidebar_position: 3
 ---
 
 # Server Configuration for WordPress Optimization
