@@ -1,6 +1,6 @@
 ---
-title: Adding a New Website in CyberPanel
-sidebar_label: Add Website
+title: Add Website & WordPress in CyberPanel
+sidebar_label: Add Website & WordPress in CyberPanel
 sidebar_position: 5
 ---
 
