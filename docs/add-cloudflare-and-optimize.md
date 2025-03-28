@@ -31,23 +31,23 @@ sidebar_position: 4
 
 - **Speed Optimization:**  
   Go to the **Speed** tab → **Optimization**
-  Go to **Content Optimization** tab
-  - Enable **Speed Brain**
-  - Enable **Cloudflare Fonts**
-  - Enable **Early Hints**
-  Go to **Protocol Optimization** tab
-  - Enable **HTTP/2** (enabled by default)
-  - Enable **HTTP/2 to Origin** (enabled by default)
-  - Enable **HTTP/3 (with QUIC)** (enabled by default)
-  - Enable **0-RTT Connection Resumption**
+  - Go to **Content Optimization** tab
+    - Enable **Speed Brain**
+    - Enable **Cloudflare Fonts**
+    - Enable **Early Hints**
+  - Go to **Protocol Optimization** tab
+    - Enable **HTTP/2** (enabled by default)
+    - Enable **HTTP/2 to Origin** (enabled by default)
+    - Enable **HTTP/3 (with QUIC)** (enabled by default)
+    - Enable **0-RTT Connection Resumption**
 
 ### Step 6: Enhance SEO with Cloudflare
-- **SSL/TLS:**  
-  Go to the **SSL/TLS** tab → **Overview**
-  - In the SSL/TLS section, set encryption mode to **Flexible**.
-  Go to the **SSL/TLS** tab → **Edge Certificates**
-  - Enable **Always Use HTTPS**
-  - Enable **Automatic HTTPS Rewrites**
+- **SSL/TLS:**  Go to the **SSL/TLS** section
+  - tab → **Overview**
+    - In the SSL/TLS section, set encryption mode to **Flexible**
+  - tab → **Edge Certificates**
+    - Enable **Always Use HTTPS**
+    - Enable **Automatic HTTPS Rewrites**
 
 - **Page Rules:**  
   Go to the **Rules** tab → **Overview**
