@@ -60,29 +60,27 @@ jobs:
         run: yarn build
       - name: Set organization variable
         run: echo "ORG_NAME=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)" >> $GITHUB_ENV
-      # - name: Clone target repository
-      #   run: git clone git@github.com:${{ env.ORG_NAME }}/${{ env.ORG_NAME }}.github.io.git
-      # - name: Clean target repository
-      #   run: |
-      #     cd ${{ env.ORG_NAME }}.github.io
-      #     git rm -rf .
-      #     git clean -fxd
-      # - name: Copy build artifacts
-      #   run: cp -a build/. ${{ env.ORG_NAME }}.github.io/
-      # - name: Commit and push changes
-      #   run: |
-      #     cd ${{ env.ORG_NAME }}.github.io
-      #     git config user.email "actions@github.com"
-      #     git config user.name "gh-actions"
-      #     git add .
-      #     git commit -m "Deploy site $(date +'%Y-%m-%d %H:%M:%S')"
-      #     git push origin main
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: build # The folder the action should deploy
-          repository-name: ${{ env.ORG_NAME }}/${{ env.ORG_NAME }}.github.io
-          ssh-key: ${{ secrets.GH_PAGES_DEPLOY }}
-          branch: main
+      - name: Clone target repository
+        run: git clone git@github.com:${{ env.ORG_NAME }}/${{ env.ORG_NAME }}.github.io.git
+      - name: Clean target repository
+        run: |
+          cd ${{ env.ORG_NAME }}.github.io
+      - name: Copy build artifacts
+        run: cp -a build/. ${{ env.ORG_NAME }}.github.io/
+      - name: Commit and push changes
+        run: |
+          cd ${{ env.ORG_NAME }}.github.io
+          git config user.email "actions@github.com"
+          git config user.name "gh-actions"
+          git add .
+          git commit -m "Deploy site $(date +'%Y-%m-%d %H:%M:%S')"
+          git push origin main
+      # - name: Deploy to GitHub Pages
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     folder: build # The folder the action should deploy
+      #     repository-name: ${{ env.ORG_NAME }}/${{ env.ORG_NAME }}.github.io
+      #     ssh-key: ${{ secrets.GH_PAGES_DEPLOY }}
+      #     branch: main
           # branch: gh-pages
           # clean: true
