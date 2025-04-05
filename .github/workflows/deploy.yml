@@ -75,7 +75,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build # The folder the action should deploy
-          token: ${{ secrets.DEPLOY_TOKEN }} # Create this in your repo settings
           repository-name: ${{ env.ORG_NAME }}/${{ env.ORG_NAME }}.github.io
           ssh-key: ${{ secrets.GH_PAGES_DEPLOY }}
           branch: main # The branch the action should deploy to
