@@ -83,6 +83,4 @@ jobs:
           ssh-key: ${{ secrets.GH_PAGES_DEPLOY }}
           branch: main
           clean: true
-          clean-exclude: |
-            .git
-            .github
+          clean-exclude: .github            
