@@ -5,7 +5,7 @@ sidebar_position: 1
 slug: /
 ---
 
-# Optimizing WordPress for Core Web Vitals and SEO
+# Optimizing WordPress for Core Web Vitals and SEO (test 2)
 
 Welcome to the ultimate guide for configuring a high-performance WordPress setup that excels in **Core Web Vitals** and **SEO**. This comprehensive documentation will walk you through every step of the process, from selecting the right hosting and server configuration to optimizing WordPress themes, plugins, and implementing advanced performance optimization techniques.
 
