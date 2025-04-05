@@ -7,7 +7,13 @@ on:
     branches: [main]
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   test-deploy:
@@ -71,22 +77,11 @@ jobs:
       #     git add .
       #     git commit -m "Deploy site $(date +'%Y-%m-%d %H:%M:%S')"
       #     git push origin main
-      # - name: Deploy to GitHub Pages
-      #   uses: JamesIves/github-pages-deploy-action@v4
-      #   with:
-      #     folder: build # The folder the action should deploy
-      #     repository-name: ${{ env.ORG_NAME }}/${{ env.ORG_NAME }}.github.io
-      #     ssh-key: ${{ secrets.GH_PAGES_DEPLOY }}
-      #     branch: main # The branch the action should deploy to
-      #     clean: true
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          deploy_key: ${{ secrets.GH_PAGES_DEPLOY }}
-          external_repository: ${{ env.ORG_NAME }}/${{ env.ORG_NAME }}.github.io
-          publish_branch: main
-          publish_dir: ./build
-          force_orphan: true # This ensures only the latest build is in the branch
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_message: "Deploy site $(date +'%Y-%m-%d %H:%M:%S')"
+          folder: build # The folder the action should deploy
+          repository-name: ${{ env.ORG_NAME }}/${{ env.ORG_NAME }}.github.io
+          ssh-key: ${{ secrets.GH_PAGES_DEPLOY }}
+          branch: main # The branch the action should deploy to
+          # clean: true
