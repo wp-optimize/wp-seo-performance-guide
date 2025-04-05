@@ -84,4 +84,4 @@ jobs:
           repository-name: ${{ env.ORG_NAME }}/${{ env.ORG_NAME }}.github.io
           ssh-key: ${{ secrets.GH_PAGES_DEPLOY }}
           branch: gh-pages # The branch the action should deploy to
-          clean: true
+          # clean: true
